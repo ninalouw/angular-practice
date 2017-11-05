@@ -20,15 +20,15 @@
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
         </div>
-        <div class='col-lg-4 col-md-4 col-sm-6 col-xs-6 card-mobile' ng-repeat="x in productsData | filter:searchText | orderBy:'-description':false ">
+        <div id='product' class='col-lg-4 col-md-4 col-sm-6 col-xs-6 card-mobile' ng-repeat="x in productsData | filter:searchText | orderBy:'-description':false ">
             <input type='hidden' ng-bind='x.id'>
             <div class='card'>
-                <img ng-bind='x.image' class='card-img-top' src='' alt='Card image'>
+                <img ng-bind='x.image' class='card-img-top' ng-src='{{x.image}}' alt='Card image'>
                 <div class='card-body'>
                     <h4 class='card-title title' ng-bind='x.title'></h4>
                     <p class='card-text bold' ng-bind='x.price'></p>
                     <p class='card-text' ng-bind='x.description'></p>
-                    <button type='button' class='btn btn-primary buy-btn'>Buy</button>
+                    <button data-id='x.id' ng-click='addToCart(x.id)' type='button' class='btn btn-primary buy-btn'>Add to Cart</button>
                 </div>
             </div>
         </div>

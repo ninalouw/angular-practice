@@ -26,13 +26,13 @@ var productsController = function ($scope, $http) {
         url: "products.json"
 
     }).then(function onSuccess(response) {
-        // Data is retrieved successfully
         $scope.productsData = response.data.products;
     }, function onError(response) {
-        // Data not retrieved sucessfully
-        // alert(response.statusText);
         $scope.myError = response.statusText;
     });
+    $scope.addToCart = function (id) {
+        console.log(id);
+    };
 };
 
 app.controller("productsController", productsController);

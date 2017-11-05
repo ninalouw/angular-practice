@@ -89,9 +89,6 @@ hr {
 
 //mobile responsive
 @media screen and (max-width: 568px){
-    .logo {
-        width:10%;
-    }
     .card-mobile {
         width:95%;
         margin:10px;
@@ -112,22 +109,10 @@ hr {
     h3 {
         font-size: 1.4rem;
     }
-    .contact-details {
-        margin-top:30px;
-    }
-    .filters-toggles {
-        label {
-            display: none;
-        }
-    }
     .filters {
         margin:10px;
     }
     .card-text {
         font-size:0.8rem;
-    }
-    #map {
-        width:300px !important;
-        height:250px !important;
     }
 }
