@@ -1,0 +1,11 @@
+@import url(/Applications/MAMP/htdocs/angular-1-app/css/bootstrap.css);
+button.btn {
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
